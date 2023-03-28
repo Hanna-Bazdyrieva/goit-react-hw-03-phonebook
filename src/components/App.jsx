@@ -13,6 +13,7 @@ class App extends Component {
     name: '',
     number: '',
   };
+
   componentDidUpdate = prevState => {
     const prevStateStr = JSON.stringify(prevState.contacts);
     const curStateStr = JSON.stringify(this.state.contacts);
@@ -67,6 +68,7 @@ class App extends Component {
       contacts: [...prev.contacts.filter(contact => contact.id !== id)],
     }));
   };
+
   changeFilter = e => {
     const { value } = e.target;
 
